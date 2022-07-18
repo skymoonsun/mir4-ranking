@@ -69,7 +69,8 @@ for($i=1; $i<=999; $i++){
                       CLAN_RANK = :CLAN_RANK, 
                       CLAN_NAME = :CLAN_NAME, 
                       CLAN_LEADER = :CLAN_LEADER,
-                      CLAN_PS = :CLAN_PS
+                      CLAN_PS = :CLAN_PS,
+                      CLAN_SUSPEND = :CLAN_SUSPEND
 WHERE CLAN_ID = :id", array(
                         "CLAN_RANK"=>$clanRank,
                         "CLAN_NAME"=>$clanName,
@@ -218,7 +219,8 @@ for($i=1; $i<=999; $i++){
                     $updateUser = $updateUser->query("UPDATE table_user SET 
                       USER_CLAN = :USER_CLAN, 
                       USER_RANK = :USER_RANK, 
-                      USER_POWER_SCORE = :USER_POWER_SCORE 
+                      USER_POWER_SCORE = :USER_POWER_SCORE,
+                      USER_SUSPEND = :USER_SUSPEND
 WHERE USER_ID = :id", array(
                         "USER_CLAN"=>$userNewClan,
                         "USER_RANK"=>$userRank,
